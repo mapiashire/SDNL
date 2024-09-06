@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam ClassAttributeIconSize 0
+
+class TestTree{
+    -root: TreeNode
+    +TestTree()
+}
+
+class TreeNode{
+    -value: int
+    -left: TreeNode
+    -right: TreeNode
+    +TreeNode(int value)
+}
+
+TestTree "1" --- "1" TreeNode
+
+
+@enduml
