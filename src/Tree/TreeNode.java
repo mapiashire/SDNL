@@ -1,11 +1,16 @@
 package Tree;
 
 public class TreeNode {
-    private int data;
-    private TreeNode leftNode, rightNode;
+    int data;
+    TreeNode leftNode, rightNode;
 
     public TreeNode(int data) {
         this.data = data;
+        leftNode = null;
+        rightNode = null;
+    }
+    public TreeNode() {
+        this.data = 0;
         leftNode = null;
         rightNode = null;
     }
