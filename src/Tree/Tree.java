@@ -35,34 +35,68 @@ public class Tree {
     }
 
     public void add(int data) {
-        if (root == null){
+        if (root == null) {
             root = new TreeNode(data);
             return;
         } else {
             TreeNode bantu = root;
             while (true) {
                 if (data < bantu.getData()) {
-                    if (bantu.leftNode == null) {
-                        bantu.leftNode = new TreeNode(data);
+                    if (bantu.getLeftNode() == null) {
+                        bantu.setLeftNode(new TreeNode(data));
                         return;
                     } else {
-                        bantu = bantu.leftNode;
-                        return;
+                        bantu = bantu.getLeftNode();
                     }
                 } else if (data > bantu.getData()) {
-                    if (bantu.rightNode == null) {
-                        bantu.rightNode = new TreeNode(data);
+                    if (bantu.getRightNode() == null) {
+                        bantu.setRightNode(new TreeNode(data));
                         return;
                     } else {
-                        bantu = bantu.rightNode;
-//                        bantu.setData(data);
-                        return;
+                        bantu = bantu.getRightNode();
                     }
+                } else {
+                    return;
                 }
-//                else {
-//                    return;
-//                }
             }
+        }
+    }
+
+    // function untuk mencari mainan kucing di pohon
+    public void preOrderTraversal() {
+        preOrderHelper(root);
+
+    }
+
+    public void preOrderHelper(TreeNode localRoot) {
+        if (localRoot != null) {
+            System.out.print(localRoot.getData() + " ");
+            preOrderHelper(localRoot.getLeftNode());
+            preOrderHelper(localRoot.getRightNode());
+        }
+    }
+
+    public void inOrderTraversal() {
+        inOrderHelper(root);
+    }
+
+    public void inOrderHelper(TreeNode localRoot) {
+        if (localRoot != null) {
+            inOrderHelper(localRoot.getLeftNode());
+            System.out.print(localRoot.getData() + " ");
+            inOrderHelper(localRoot.getRightNode());
+        }
+    }
+
+    public void postOrderTraversal() {
+        postOrderHelper(root);
+    }
+
+    public void postOrderHelper(TreeNode localRoot) {
+        if (localRoot != null) {
+            postOrderHelper(localRoot.getLeftNode());
+            postOrderHelper(localRoot.getRightNode());
+            System.out.print(localRoot.getData() + " ");
         }
     }
 

@@ -11,6 +11,15 @@ class Tree{
 
     +setRoot : void
     +getRoot : TreeNode
+
+    +getNode(int) : TreeNode
+    +add(int) : void
+    +preOrderTraversal() : void
+    +inOrderTraversal() : void
+    +postOrderTraversal() : void
+    +preOrderHelper(TreeNode) : void
+    +inOrderHelper(TreeNode) : void
+    +postOrderHelper(TreeNode) : void
 }
 
 class TreeNode{
