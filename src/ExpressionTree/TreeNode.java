@@ -1,16 +1,16 @@
-package Tree;
+package ExpressionTree;
 
 public class TreeNode {
-    int data;
+    char data;
     TreeNode leftNode, rightNode;
 
-    public TreeNode(int data) {
+    public TreeNode(char data) {
         this.data = data;
         leftNode = null;
         rightNode = null;
     }
 
-    public TreeNode(int data, TreeNode leftNode, TreeNode rightNode) {
+    public TreeNode(char data, TreeNode leftNode, TreeNode rightNode) {
         this.data = data;
         this.leftNode = leftNode;
         this.rightNode = rightNode;
@@ -22,11 +22,11 @@ public class TreeNode {
         rightNode = null;
     }
 
-    public int getData() {
+    public char getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(char data) {
         this.data = data;
     }
 

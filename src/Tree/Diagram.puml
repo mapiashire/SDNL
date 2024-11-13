@@ -20,6 +20,11 @@ class Tree{
     +preOrderHelper(TreeNode) : void
     +inOrderHelper(TreeNode) : void
     +postOrderHelper(TreeNode) : void
+    +getParent(int) : TreeNode
+    +getPredessor(TreeNode) : TreeNode
+    +remove(int) : boolean
+
+
 }
 
 class TreeNode{
@@ -34,6 +39,7 @@ class TreeNode{
     +getLeftNode() : TreeNode
     +setRightNode(TreeNode) : void
     +getRightNode() : TreeNode
+    +isLeaf() : boolean
 }
 
 Tree "1" *===> "1" TreeNode

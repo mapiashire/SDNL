@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam ClassAttributeIconSize 0
+
+class Vertex {
+    # char label
+
+    <<Constructor>> Vertex (char)
+}
+
+class Graph{
+    - ArrayList
+
+
+    + void addVertex(char)
+    + void addEdge(int, int, int)
+    + int indexVertex(char)
+    + void addEdge(char, char, char)
+    + void printAdjacency()
+}
+
+@enduml

@@ -1,7 +1,5 @@
 package Tree;
 
-import java.util.Scanner;
-
 public class MainPanjatPohon {
     public static void main(String[] args) {
         Tree pohon = new Tree();
@@ -17,19 +15,23 @@ public class MainPanjatPohon {
         pohon.add(2);
         pohon.add(40);
         pohon.add(12);
-        TreeNode cari;
-
-        Scanner aria = new Scanner(System.in);
-
 
         System.out.print("Preorder: ");
         pohon.preOrderTraversal();
         System.out.println();
-        System.out.print("Inorder: ");
-        pohon.inOrderTraversal();
-        System.out.println();
-        System.out.print("Postorder: ");
-        pohon.postOrderTraversal();
+
+        int[] isi = {12, 55, 21, 42};
+        for (int i = 0; i < isi.length; i++) {
+            int hapusIsi = isi[i];
+            System.out.println("\n\nHapus = " + hapusIsi);
+            pohon.remove(hapusIsi);
+
+            pohon.preOrderTraversal();
+
+        }
+
+
+
 
 
 //        do{

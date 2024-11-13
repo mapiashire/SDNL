@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide circle
+skinparam ClassAttributeIconSize 0
+
+class Tree{
+    -root : TreeNode
+
+    +addExpressionInfix(String) : void
+    +prefix() : void
+    +infix() : void
+    +postfix() : void
+    +prefixHelper(TreeNode) : void
+    +infixHelper(TreeNode) : void
+    +postfixHelper(TreeNode) : void
+    -isOperator(char) : boolean
+    -isOperand(char) : boolean
+}
+
+class TreeNode{
+    -data      : char
+    -leftNode  : TreeNode
+    -rightNode : TreeNode
+    <<Constructor>> TreeNode(char)
+
+    +setData(char) : void
+    +getData() : char
+    +setLeftNode(TreeNode) : void
+    +getLeftNode() : TreeNode
+    +setRightNode(TreeNode) : void
+    +getRightNode() : TreeNode
+    +isLeaf() : boolean
+}
+
+Tree "1" *===> "1" TreeNode
+
+@enduml
